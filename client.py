@@ -1,6 +1,5 @@
 from aes import AESCipher
 from threading import Thread
-import platform
 import hashlib
 import socket
 import json
@@ -91,7 +90,7 @@ class Client(Thread):
 
 if __name__ == "__main__":
     HOST = socket.gethostbyname(socket.gethostname())
-    PORT = 666
+    PORT = 4444
     CLIENT_IP = socket.gethostbyname(socket.gethostname())
-    BUFFER = 0x100
+    BUFFER = 1024
     Client().run()

@@ -145,6 +145,7 @@ class Server(Thread):
 
 if __name__ == "__main__":
     HOST = socket.gethostbyname(socket.gethostname())
-    BUFFER = 0x100
-    Server(666).run()
+    BUFFER = 1024
+    PORT = 4444
+    Server(PORT).run()
 
